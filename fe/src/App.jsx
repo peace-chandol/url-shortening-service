@@ -11,7 +11,7 @@ function App() {
 
         <RedirectComponent />
         <GenerateShortUrlComponent />
-        <TableUrlComponent />        
+        <TableUrlComponent />
         
     </>
   )
