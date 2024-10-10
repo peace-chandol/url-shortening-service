@@ -8,4 +8,7 @@ router.route('/')
     .delete(shorteningController.deleteUrl)
 
 
+router.route('/:shortUrl')
+    .get(shorteningController.getLongUrl)
+
 module.exports = router
