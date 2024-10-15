@@ -31,15 +31,15 @@ const RedirectComponent = () => {
 
 
     return (
-        <div>
+        <div className="redirect-container">
             <h2>Redirect</h2>
             <h3>Enter short URL</h3>
             <div>{ errorText }</div>
             <div>
                 <input type="text" onChange={handleRedirectLongUrlBtn} value={shortUrl} />
-                <button onClick={handleGetLongUrl}>Find</button>
+                <button onClick={handleGetLongUrl} className="btn">Find</button>
             </div>
-            <div>{ result }</div>
+            <div className="little-text">{ result }</div>
         </div>
     )
 }

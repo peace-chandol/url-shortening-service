@@ -36,12 +36,12 @@ const GenerateShortUrlComponent = () => {
     }
 
     return (
-        <div>
+        <div className="generate-url-container">
             <h2>Generate Short URL</h2>
             <h3>Enter Long URL</h3>
             <div>
                 <input type="text" id='generateShortUrl' value={longUrl} onChange={handleInputLongUrl}/>
-                <button id='createShortUrlBtn' onClick={handleCreateShortUrlBtn}>Create</button>
+                <button id='createShortUrlBtn' onClick={handleCreateShortUrlBtn} className="btn">Create</button>
             </div>
         </div>
     )

@@ -7,11 +7,14 @@ function App() {
 
   return (
     <>
-        <h1>URL SHORTENING</h1>
+        <div className='container'>
+            <h1>URL SHORTENING</h1>
 
-        <RedirectComponent />
-        <GenerateShortUrlComponent />
-        <TableUrlComponent />
+            <RedirectComponent />
+            <GenerateShortUrlComponent />
+            <TableUrlComponent />
+
+        </div>
         
     </>
   )
