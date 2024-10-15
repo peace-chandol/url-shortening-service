@@ -7,7 +7,8 @@ const TableUrlComponent = () => {
 
     useEffect(() => {
         getURLs()
-    },[])
+        console.log(allURLs)
+    }, [])
 
     async function getURLs() {
         try {
@@ -20,6 +21,19 @@ const TableUrlComponent = () => {
         }
     }
 
+    async function handleDeleteBtn(e) {
+        const id = e.target.id.split('_')[1]
+
+        try {
+            const response = await axios.delete('http://localhost:3000/shortening', { data: { id } })
+            console.log('Data deleted successfully:', response.data)
+        } catch (error) {
+            console.error('Error deleting data:', error)
+        }
+
+        await getURLs()
+    }
+
     return (
         <div>
             <h2>Table Show Relationship between Long Url and Short Url</h2>
@@ -29,17 +43,17 @@ const TableUrlComponent = () => {
                         <tr>
                             <th>Long Url</th>
                             <th>Short Url</th>
+                            <th>Delete Row</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {/* <tr>
-                            <td>Example of Long Url</td>
-                            <td>Example of Short  Url</td>
-                        </tr> */}
                         {allURLs.map((url) => (
                             <tr key={url.id}>
                                 <td>{url.longUrl}</td>
                                 <td>{url.shortUrl}</td>
+                                <td>
+                                    <button id={`deleteBtn_${url.id}`} onClick={handleDeleteBtn}>Delete</button>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
