@@ -125,3 +125,12 @@ table th {
     font-size: 1.4rem;
     background-color: #333;
 }
+
+table a {
+    color: white;
+    text-decoration: none;
+}
+
+table a:hover {
+    text-decoration: underline;
+}

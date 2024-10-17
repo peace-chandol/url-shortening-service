@@ -49,8 +49,8 @@ const TableUrlComponent = () => {
                     <tbody>
                         {allURLs.map((url) => (
                             <tr key={url.id}>
-                                <td>{url.longUrl}</td>
-                                <td>{url.shortUrl}</td>
+                                <td><a href={url.longUrl}>{url.longUrl}</a></td>
+                                <td><a href={url.longUrl}>{url.shortUrl}</a></td>
                                 <td>
                                     <button id={`deleteBtn_${url.id}`} onClick={handleDeleteBtn}>Delete</button>
                                 </td>
