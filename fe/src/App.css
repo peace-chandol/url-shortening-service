@@ -81,3 +81,47 @@ input {
     padding: 0.6rem 0.8rem;
     border-radius: 5px;
 }
+
+.table-url-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 0;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-container {
+    margin-top: 2rem;
+    width: 80%;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    
+}
+
+table, th, td {
+    border: 4px solid #333;
+    font-size: 1.2rem;
+    padding: 0.6rem 0.8rem;
+}
+
+table button {
+    cursor: pointer;
+    outline: none;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    padding: 0.6rem 0.8rem;
+}
+
+table th {
+    font-size: 1.4rem;
+    background-color: #333;
+}

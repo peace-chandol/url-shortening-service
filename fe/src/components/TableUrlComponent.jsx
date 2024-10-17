@@ -35,9 +35,9 @@ const TableUrlComponent = () => {
     }
 
     return (
-        <div>
+        <div className="table-url-container">
             <h2>Table Show Relationship between Long Url and Short Url</h2>
-            <div>
+            <div className="table-container">
                 <table>
                     <thead>
                         <tr>

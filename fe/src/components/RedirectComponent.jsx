@@ -3,9 +3,9 @@ import axios from "axios"
 
 
 const RedirectComponent = () => {
-    const [shortUrl, setShortUrl] = useState('')
+    const [shortUrl, setShortUrl] = useState(null)
     const [errorText, setErrorText] = useState(null)
-    const [result, setResult] = useState('')
+    const [result, setResult] = useState(null)
 
     function handleRedirectLongUrlBtn(e) {
         setShortUrl(e.target.value)
@@ -32,14 +32,14 @@ const RedirectComponent = () => {
 
     return (
         <div className="redirect-container">
-            <h2>Redirect</h2>
+            <h2>Get Long Url</h2>
             <h3>Enter short URL</h3>
             <div>{ errorText }</div>
             <div>
                 <input type="text" onChange={handleRedirectLongUrlBtn} value={shortUrl} />
                 <button onClick={handleGetLongUrl} className="btn">Find</button>
             </div>
-            <div className="little-text">{ result }</div>
+            <div className="little-text">Result : { result }</div>
         </div>
     )
 }
